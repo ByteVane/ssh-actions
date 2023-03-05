@@ -1,0 +1,11 @@
+name: 'SSH to Github Actions'
+author: 'Byrne'
+description: 'Connect to GitHub Actions VM via SSH for interactive debugging'
+runs:
+  using: "composite"
+  steps: 
+    - run: $GITHUB_ACTION_PATH/tmate-actions.sh
+      shell: bash
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
